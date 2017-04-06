@@ -1,0 +1,54 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.5.1)
+      public_suffix (~> 2.0, >= 2.0.2)
+    data_objects (0.10.17)
+      addressable (~> 2.1)
+    dm-core (1.2.1)
+      addressable (~> 2.3)
+    dm-do-adapter (1.2.0)
+      data_objects (~> 0.10.6)
+      dm-core (~> 1.2.0)
+    dm-migrations (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-sqlite-adapter (1.2.0)
+      dm-do-adapter (~> 1.2.0)
+      do_sqlite3 (~> 0.10.6)
+    dm-timestamps (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-validations (1.2.0)
+      dm-core (~> 1.2.0)
+    do_sqlite3 (0.10.17-x86-mingw32)
+      data_objects (= 0.10.17)
+    erubis (2.7.0)
+    public_suffix (2.0.5)
+    rack (1.6.5)
+    rack-protection (1.5.3)
+      rack
+    rdiscount (2.2.0.1)
+    sinatra (1.4.8)
+      rack (~> 1.5)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
+    sinatra-rdiscount (1.0.0.1)
+      erubis (>= 2.6.5)
+      rdiscount (>= 1.5.8)
+      sinatra
+    tilt (2.0.7)
+
+PLATFORMS
+  x86-mingw32
+
+DEPENDENCIES
+  dm-core
+  dm-migrations
+  dm-sqlite-adapter
+  dm-timestamps
+  dm-validations
+  rdiscount
+  sinatra (~> 1.4.7)
+  sinatra-rdiscount
+
+BUNDLED WITH
+   1.14.6

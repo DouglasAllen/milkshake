@@ -1,8 +1,8 @@
-enable :sessions 
+enable :sessions
 
-#admin login page
+# admin login page
 get '/login' do
-  erb :'milkshake/login',:layout=>:'milkshake/layout'
+  erb :'milkshake/login', layout: :'milkshake/layout'
 end
 
 post '/login' do
@@ -12,18 +12,18 @@ post '/login' do
   redirect '/pages'
 end
 
-#admin logout page
+# admin logout page
 get '/logout' do
   session[:user] = false
   redirect '/pages'
 end
 
 helpers do
-def admin?
-  session[:user]
-end
- 
-def protected!
-  stop [ 401, 'You do not have permission to see this page.' ] unless admin?
-end
+  def admin?
+    session[:user]
+  end
+
+  def protected!
+    stop [401, 'You do not have permission to see this page.'] unless admin?
+  end
 end
